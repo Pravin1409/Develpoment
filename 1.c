@@ -1,45 +1,22 @@
 #include<stdio.h>
-#include<stdbool.h>
-bool CheckChar(char *str,char ch)
+void strcpyx(char *src,char *dest)
 {
-    while (*str!='\0')
+    while (*src!='\0')
     {
-        if (*str==ch)
-        {
-            break;
-        }
-        str++;
+        *dest=*src;
+        src++;
+        dest++;
     }
-    if (*str==ch)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-    
-    
+    dest;
 }
 int main()
 {
-    char Arr[40];
-    char ch;
-    bool bRet=false;
-    printf("Enter the string:\n");
-    scanf("%[^'\n']s",Arr);
+    char Arr[30];
+    char brr[30];
+    printf("Enter string 1: \n");
+    scanf("%[^\n]s",Arr);
+    strcpyx(Arr,brr);
 
-    printf("Enter charcter:\n");
-    scanf(" %c",&ch);
-
-    bRet=CheckChar(Arr,ch);
-    if (bRet==true)
-    {
-        printf("Character  found ");
-    }
-    else
-    {
-        printf("Character not foun");
-    }
+    printf(" the copy string are:%s\n",brr);
     return 0;
 }

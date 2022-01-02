@@ -1,29 +1,24 @@
 #include<stdio.h>
-int count(char *str,char ch)
+void Display(char*str,char*dest,int icnt)
 {
-    int icnt=0;
-    while (*str!='\0')
+    while ((*str!='\0')&&(icnt!=0))
     {
-        if ((*str==ch))
-        {
-        
-            icnt++;
-        }
+        *dest=*str;
         str++;
+        dest++;
+        icnt--;
     }
-    return icnt;
+    dest;
 }
 int main()
 {
-    char Arr[30];
-    char ch;
-    int iRet=0;
-    printf("Enter the string");
-    scanf("%[^\n]s",Arr);
-
-    printf("Enter char:\n");
-    scanf(" %c",&ch);
-    iRet=count(Arr,ch);
-    printf("Count is : %d",iRet);
+    char Arr[50];
+    char Brr[30];
+    printf("Enter string: ");
+    scanf("%[^\'n']s",Arr);
+    Display(Arr,Brr,2);
+    printf("string are:%s\n",Brr);
     return 0;
 }
+
+

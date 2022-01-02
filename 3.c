@@ -1,50 +1,25 @@
 #include<stdio.h>
-int Lindex(char str[],char c)
-
+void StrcpyCap(char *src,char*dest)
 {
-    int i=0;
-    
-    while (str[i]!='\0')
+    while (*src!='\0')
     {
-        if (str[i]==c)
+        if ((*src>='A')&&(*src<='Z'))
         {
-            break;
+            *dest=*src;
+            src++;
         }
-        i++;
+        dest++;
     }
-    if (str[i]!=c)
-    {
-        return -1;
-    }
-    else
-    {
-        return i;
-    }
-    
-
+    dest;
 }
 int main()
 {
-    char Arr[30];
-    char ch;
-    int iRet=0;
-    printf("Enter string:");
-    scanf("%[^\n]s",Arr);
+    char arr[30];
+    char brr[30];
+    printf("Enter source string:");
+    scanf("%[^\n]s",arr);
+    StrcpyCap(arr,brr);
 
-    printf("Enter character:");
-    scanf(" %c",&ch);
-    iRet=Lindex(Arr,ch);
-    if (iRet==-1)
-    {
-        printf("no found");
-    }
-    else
-    {
-        printf("index:%d",iRet);
-    }
-    
-
-    
-    
+    printf("Result :%s",brr);
     return 0;
 }

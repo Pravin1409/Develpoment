@@ -1,32 +1,29 @@
 #include<stdio.h>
-int Lindex(char*str,char ch)
+void Display(char*arr,char *brr)
 {
-    int index=-1;
-    int i=0;
-    while (str[i]!='\0')
+    while (*arr!='\0')
     {
-        if (str[i]==ch)
+        if (*arr>='a'&&*arr<='z')
         {
-            index=i;
+            *brr=*arr;
+             arr++;
         }
-        i++;
+      
+        brr++;
+        
     }
-    return index;
+    brr;
+    
 }
 int main()
 {
     char Arr[30];
-    char ch;
-    int iRet=0;
+    char Brr[30];
+    printf("Enter the string:");
+    scanf("%[^\n]",Arr);
 
-    printf("Enter String:");
-    scanf("%[^\n]s",Arr);
+    Display(Arr,Brr);
 
- 
-    printf("Enter char:");
-    scanf(" %c",&ch);
-
-    iRet= Lindex(Arr,ch);
-    printf("index:%d",iRet);
+    // printf("String:%s",Brr);
     return 0;
 }
