@@ -1,24 +1,15 @@
 #include<stdio.h>
-void Display(char*str,char*dest,int icnt)
+void Display()
 {
-    while ((*str!='\0')&&(icnt!=0))
+    int i=0;
+    for(i=0;i<=5;i++)
     {
-        *dest=*str;
-        str++;
-        dest++;
-        icnt--;
+        printf("pravin \n");
     }
-    dest;
 }
+
 int main()
 {
-    char Arr[50];
-    char Brr[30];
-    printf("Enter string: ");
-    scanf("%[^\'n']s",Arr);
-    Display(Arr,Brr,2);
-    printf("string are:%s\n",Brr);
+    Display();
     return 0;
 }
-
-

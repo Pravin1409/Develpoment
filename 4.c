@@ -1,29 +1,49 @@
 #include<stdio.h>
-void Display(char*arr,char *brr)
+
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+int Check(int ino)
 {
-    while (*arr!='\0')
+    if((ino%5)==0)
     {
-        if (*arr>='a'&&*arr<='z')
-        {
-            *brr=*arr;
-             arr++;
-        }
-      
-        brr++;
-        
+        return TRUE;
     }
-    brr;
-    
+    else
+    {
+        return FALSE;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int main()
 {
-    char Arr[30];
-    char Brr[30];
-    printf("Enter the string:");
-    scanf("%[^\n]",Arr);
-
-    Display(Arr,Brr);
-
-    // printf("String:%s",Brr);
-    return 0;
+int ivalue=0;
+BOOL bRet=FALSE;
+printf("enter the number=");
+scanf("%d",&ivalue);
+bRet=Check(ivalue);
+if(bRet==TRUE)
+{
+    printf("divisible 5");
+}
+else
+{
+    printf("not divisible 5");
+}
+return 0;
 }

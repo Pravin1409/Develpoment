@@ -1,22 +1,22 @@
 #include<stdio.h>
-void strcpyx(char *src,char *dest)
+int Divide(int ino1,int ino2)
 {
-    while (*src!='\0')
+    int iAns=0;
+    if(ino2<0)
     {
-        *dest=*src;
-        src++;
-        dest++;
+        return -1;
     }
-    dest;
+    iAns=ino1/ino2;
+    return iAns;
 }
+
 int main()
 {
-    char Arr[30];
-    char brr[30];
-    printf("Enter string 1: \n");
-    scanf("%[^\n]s",Arr);
-    strcpyx(Arr,brr);
+    int ivalue1=20,ivalue2=2;
+     int iRet=0;
 
-    printf(" the copy string are:%s\n",brr);
+    iRet=Divide(ivalue1,ivalue2);
+    printf("division is %d",iRet);
     return 0;
 }
+

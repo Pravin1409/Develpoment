@@ -1,25 +1,16 @@
 #include<stdio.h>
-int CountSpace(char*str)
+void Accept(int ino)
 {
-    int i=0;
-    while (*str!='\0')
-    {
-        if (*str==' ')
-        {
-            i++;
-        }
-        str++;
-    }
-    return i;
+  int icnt=0;
+  for(icnt=0;icnt<=ino;icnt++)
+  {
+      printf("* \t");
+  }
 }
 int main()
 {
-    char str[30];
-    int iRet=0;
-    printf("Enter char:");
-    scanf("%[^\n]s",str);
-    iRet=CountSpace(str);
-    printf("Count is:%d",iRet);
-
+    int ivalue =0;
+    ivalue=5;
+    Accept(ivalue);
     return 0;
 }
